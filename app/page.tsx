@@ -1,103 +1,237 @@
-import Image from "next/image";
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { MapPin, Star, Users, Calendar, Shield, Award, Clock } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
+import ImageCarousel from "@/components/image-carousel"
 
-export default function Home() {
+export default function HomePage() {
+  const destinations = [
+    {
+      name: "Tanzania",
+      description: "Experience the majestic Serengeti and climb Mount Kilimanjaro",
+      image: "/images/tree.webp",
+      highlights: ["Serengeti National Park", "Mount Kilimanjaro", "Ngorongoro Crater"],
+      slug: "tanzania",
+    },
+    {
+      name: "Zanzibar",
+      description: "Pristine beaches and rich cultural heritage await",
+      image: "/images/mnemba.jpg?height=400&width=600",
+      highlights: ["Stone Town", "Spice Tours", "Beach Resorts"],
+      slug: "zanzibar",
+    },
+    {
+      name: "Kenya",
+      description: "Witness the Great Migration and explore diverse landscapes",
+      image: "/images/kenya G.webp?height=400&width=600",
+      highlights: ["Maasai Mara", "Amboseli National Park", "Lake Nakuru"],
+      slug: "kenya",
+    },
+  ]
+
+  const features = [
+    {
+      icon: Shield,
+      title: "Safe & Secure",
+      description: "Licensed tour operators with comprehensive insurance coverage",
+    },
+    {
+      icon: Award,
+      title: "Expert Guides",
+      description: "Professional local guides with years of experience",
+    },
+    {
+      icon: Clock,
+      title: "24/7 Support",
+      description: "Round-the-clock customer support throughout your journey",
+    },
+    {
+      icon: Users,
+      title: "Group & Private",
+      description: "Flexible options for solo travelers, couples, and groups",
+    },
+  ]
+
+  const carouselImages = [
+    {
+      src: "/images/wildlifec-good.webp",
+      alt: "Serengeti Wildlife Safari",
+      title: "Serengeti National Park",
+      description: "Witness the Great Migration and incredible wildlife",
+    },
+    {
+      src: "/images/kili1.webp",
+      alt: "Mount Kilimanjaro",
+      title: "Mount Kilimanjaro",
+      description: "Conquer Africa's highest peak with expert guides",
+    },
+    {
+      src: "/images/mnemba.jpg",
+      alt: "Zanzibar Beach",
+      title: "Zanzibar Beaches",
+      description: "Relax on pristine white sand beaches",
+    },
+    {
+      src: "/images/nyumbu.jpeg?height=600&width=1200",
+      alt: "Ngorongoro Crater",
+      title: "Ngorongoro Crater",
+      description: "Explore the world's largest intact volcanic caldera",
+    },
+    {
+      src: "/images/cultural.webp?height=600&width=1200",
+      alt: "Maasai Culture",
+      title: "Cultural Experiences",
+      description: "Immerse yourself in authentic local traditions",
+    },
+  ]
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen bg-white">
+      {/* Hero Section with Image Carousel */}
+      <section className="relative h-screen">
+        <ImageCarousel images={carouselImages} />
+        <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
+          <div className="text-center text-white max-w-4xl mx-auto px-4 z-10">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+              Discover East Africa's
+              <span className="block text-green-300">Hidden Treasures</span>
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-green-100">
+              Experience unforgettable safaris, pristine beaches, and rich cultures across Tanzania, Zanzibar, and Kenya
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                size="lg"
+                className="bg-green-500 hover:bg-green-400 text-black font-semibold px-8 py-4 text-lg"
+                asChild
+              >
+                <Link href="/booking" className="flex items-center gap-2">
+                  <Calendar className="h-5 w-5" />
+                  Start Your Adventure
+                </Link>
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-white hover:text-black px-8 py-4 text-lg"
+                asChild
+              >
+                <Link href="/destinations" className="flex items-center gap-2">
+                  <MapPin className="h-5 w-5" />
+                  Explore Destinations
+                </Link>
+              </Button>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-black text-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-green-400 mb-4">Why Choose greenTanzania?</h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              We provide exceptional safari experiences with professional service and local expertise
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <Card
+                key={index}
+                className="text-center border-green-800 bg-black/80 hover:shadow-lg hover:shadow-green-900/20 transition-shadow"
+              >
+                <CardHeader>
+                  <feature.icon className="h-12 w-12 text-green-400 mx-auto mb-4" />
+                  <CardTitle className="text-green-300">{feature.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-300">{feature.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Destinations Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-green-800 mb-4">Our Destinations</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Explore the most spectacular destinations in East Africa
+            </p>
+          </div>
+          <div className="grid lg:grid-cols-3 gap-8">
+            {destinations.map((destination, index) => (
+              <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow group border-black">
+                <div className="relative h-64 overflow-hidden">
+                  <Image
+                    src={destination.image || "/placeholder.svg"}
+                    alt={destination.name}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <h3 className="text-2xl font-bold mb-2">{destination.name}</h3>
+                    <div className="flex items-center gap-1 text-green-300">
+                      <Star className="h-4 w-4 fill-current" />
+                      <Star className="h-4 w-4 fill-current" />
+                      <Star className="h-4 w-4 fill-current" />
+                      <Star className="h-4 w-4 fill-current" />
+                      <Star className="h-4 w-4 fill-current" />
+                    </div>
+                  </div>
+                </div>
+                <CardContent className="p-6 bg-gradient-to-b from-white to-gray-50">
+                  <p className="text-gray-600 mb-4">{destination.description}</p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {destination.highlights.map((highlight, idx) => (
+                      <Badge key={idx} variant="secondary" className="bg-black/10 text-black border border-black/20">
+                        {highlight}
+                      </Badge>
+                    ))}
+                  </div>
+                  <Button asChild className="w-full bg-black hover:bg-gray-800 text-white">
+                    <Link href={`/destinations/${destination.slug}`}>Explore {destination.name}</Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-black to-green-900 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-4">Ready for Your African Adventure?</h2>
+          <p className="text-xl mb-8 text-green-100 max-w-2xl mx-auto">
+            Book your dream safari today and create memories that will last a lifetime
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              size="lg"
+              className="bg-green-500 hover:bg-green-400 text-black px-8 py-4 text-lg font-semibold"
+              asChild
+            >
+              <Link href="/booking">Book Your Safari</Link>
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-white text-white hover:bg-white hover:text-black px-8 py-4 text-lg"
+              asChild
+            >
+              <Link href="/contact">Get Free Quote</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
     </div>
-  );
+  )
 }
