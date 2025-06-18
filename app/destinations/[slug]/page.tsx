@@ -20,23 +20,24 @@ import {
 import { getDestinationBySlug, getRelatedDestinations } from "@/lib/data"
 
 interface DestinationPageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 export async function generateStaticParams() {
   return [{ slug: "tanzania" }, { slug: "zanzibar" }, { slug: "kenya" }]
 }
 
-export default function DestinationPage({ params }: DestinationPageProps) {
-  const destination = getDestinationBySlug(params.slug)
+export default async function DestinationPage({ params }: DestinationPageProps) {
+  const { slug } = await params
+  const destination = getDestinationBySlug(slug)
 
   if (!destination) {
     notFound()
   }
 
-  const relatedDestinations = getRelatedDestinations(params.slug)
+  const relatedDestinations = getRelatedDestinations(slug)
 
   return (
     <div className="min-h-screen bg-white">
