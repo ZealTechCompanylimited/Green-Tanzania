@@ -16,8 +16,6 @@ import {
   StampIcon as Passport,
 } from "lucide-react"
 import Link from "next/link"
-import Navigation from "@/components/navigation"
-
 
 export default function TravelGuidePage() {
   const essentialInfo = [
@@ -211,8 +209,6 @@ export default function TravelGuidePage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Navigation />
-
       {/* Hero Section */}
       <section className="relative h-64 flex items-center justify-center bg-gradient-to-r from-green-800 to-green-600">
         <div className="relative z-10 text-center text-white">
