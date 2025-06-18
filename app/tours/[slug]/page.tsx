@@ -9,9 +9,9 @@ import { MapPin, Clock, Star, Users, CheckCircle, XCircle, Calendar, Camera, Mou
 import { getTourBySlug, getRelatedTours } from "@/lib/data"
 
 interface TourPageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 export async function generateStaticParams() {
@@ -24,14 +24,15 @@ export async function generateStaticParams() {
   ]
 }
 
-export default function TourPage({ params }: TourPageProps) {
-  const tour = getTourBySlug(params.slug)
+export default async function TourPage({ params }: TourPageProps) {
+  const { slug } = await params
+  const tour = getTourBySlug(slug)
 
   if (!tour) {
     notFound()
   }
 
-  const relatedTours = getRelatedTours(tour.category, params.slug)
+  const relatedTours = getRelatedTours(tour.category, slug)
 
   return (
     <div className="min-h-screen bg-white">
