@@ -18,14 +18,14 @@ export default function HomePage() {
     {
       name: "Zanzibar",
       description: "Pristine beaches and rich cultural heritage await",
-      image: "/images/mnemba.jpg?height=400&width=600",
+      image: "/images/mnemba.jpg",
       highlights: ["Stone Town", "Spice Tours", "Beach Resorts"],
       slug: "zanzibar",
     },
     {
       name: "Kenya",
       description: "Witness the Great Migration and explore diverse landscapes",
-      image: "/images/kenya G.webp?height=400&width=600",
+      image: "/images/kenya G.webp",
       highlights: ["Maasai Mara", "Amboseli National Park", "Lake Nakuru"],
       slug: "kenya",
     },
@@ -65,7 +65,7 @@ export default function HomePage() {
       src: "/images/kili1.webp",
       alt: "Mount Kilimanjaro",
       title: "Mount Kilimanjaro",
-      description: "Conquer Africa's highest peak with expert guides",
+      description: "Conquer Africa&#39;s highest peak with expert guides",
     },
     {
       src: "/images/mnemba.jpg",
@@ -74,13 +74,13 @@ export default function HomePage() {
       description: "Relax on pristine white sand beaches",
     },
     {
-      src: "/images/nyumbu.jpeg?height=600&width=1200",
+      src: "/images/nyumbu.jpeg",
       alt: "Ngorongoro Crater",
       title: "Ngorongoro Crater",
-      description: "Explore the world's largest intact volcanic caldera",
+      description: "Explore the world&#39;s largest intact volcanic caldera",
     },
     {
-      src: "/images/cultural.webp?height=600&width=1200",
+      src: "/images/cultural.webp",
       alt: "Maasai Culture",
       title: "Cultural Experiences",
       description: "Immerse yourself in authentic local traditions",
@@ -95,7 +95,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
           <div className="text-center text-white max-w-4xl mx-auto px-4 z-10">
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              Discover East Africa's
+              Discover East Africa&#39;s
               <span className="block text-green-300">Hidden Treasures</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-green-100">
