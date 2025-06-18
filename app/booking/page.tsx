@@ -13,7 +13,6 @@ import { Calendar } from "@/components/ui/calendar"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { CalendarIcon, Users, MapPin, Mail, Phone } from "lucide-react"
 import { format } from "date-fns"
-import Navigation from "@/components/navigation"
 
 export default function BookingPage() {
   const [date, setDate] = useState<Date>()
@@ -77,8 +76,6 @@ export default function BookingPage() {
 
   return (
     <div className="min-h-screen bg-green-50">
-      <Navigation />
-
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">

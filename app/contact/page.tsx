@@ -10,8 +10,6 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { MapPin, Phone, Mail, Clock, Send, MessageCircle } from "lucide-react"
-import Navigation from "@/components/navigation"
-
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -113,8 +111,6 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Navigation />
-
       {/* Hero Section */}
       <section className="relative h-64 flex items-center justify-center bg-gradient-to-r from-green-800 to-green-600">
         <div className="relative z-10 text-center text-white">
@@ -135,7 +131,9 @@ export default function ContactPage() {
                     <MessageCircle className="h-5 w-5" />
                     Send Us a Message
                   </CardTitle>
-                  <CardDescription>Fill out the form below and we&apos;ll get back to you within 24 hours</CardDescription>
+                  <CardDescription>
+                    Fill out the form below and we&apos;ll get back to you within 24 hours
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <form onSubmit={handleSubmit} className="space-y-6">

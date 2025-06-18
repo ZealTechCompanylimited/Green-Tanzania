@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import {
   NavigationMenu,
@@ -18,6 +18,18 @@ import { cn } from "@/lib/utils"
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as Element
+      if (mobileMenuOpen && !target.closest("header")) {
+        setMobileMenuOpen(false)
+      }
+    }
+
+    document.addEventListener("click", handleClickOutside)
+    return () => document.removeEventListener("click", handleClickOutside)
+  }, [mobileMenuOpen])
 
   const destinations = [
     {
@@ -182,7 +194,11 @@ export default function Navigation() {
         {mobileMenuOpen && (
           <div className="lg:hidden mt-4 pb-4 border-t border-black/10">
             <nav className="flex flex-col space-y-2 pt-4">
-              <Link href="/" className="text-gray-700 hover:text-black font-medium py-2">
+              <Link
+                href="/"
+                className="text-gray-700 hover:text-black font-medium py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 Home
               </Link>
               <div className="py-2">
@@ -193,11 +209,16 @@ export default function Navigation() {
                       key={destination.name}
                       href={destination.href}
                       className="block text-gray-600 hover:text-black py-1"
+                      onClick={() => setMobileMenuOpen(false)}
                     >
                       {destination.name}
                     </Link>
                   ))}
-                  <Link href="/destinations" className="block text-gray-600 hover:text-black py-1">
+                  <Link
+                    href="/destinations"
+                    className="block text-gray-600 hover:text-black py-1"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
                     All Destinations
                   </Link>
                 </div>
@@ -206,25 +227,50 @@ export default function Navigation() {
                 <div className="font-medium text-gray-700 mb-2">Tours</div>
                 <div className="pl-4 space-y-1">
                   {tours.map((tour) => (
-                    <Link key={tour.name} href={tour.href} className="block text-gray-600 hover:text-black py-1">
+                    <Link
+                      key={tour.name}
+                      href={tour.href}
+                      className="block text-gray-600 hover:text-black py-1"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
                       {tour.name}
                     </Link>
                   ))}
-                  <Link href="/tours" className="block text-gray-600 hover:text-black py-1">
+                  <Link
+                    href="/tours"
+                    className="block text-gray-600 hover:text-black py-1"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
                     All Tours
                   </Link>
                 </div>
               </div>
-              <Link href="/blog" className="text-gray-700 hover:text-black font-medium py-2">
+              <Link
+                href="/blog"
+                className="text-gray-700 hover:text-black font-medium py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 Blog
               </Link>
-              <Link href="/travel-guide" className="text-gray-700 hover:text-black font-medium py-2">
+              <Link
+                href="/travel-guide"
+                className="text-gray-700 hover:text-black font-medium py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 Travel Guide
               </Link>
-              <Link href="/about" className="text-gray-700 hover:text-black font-medium py-2">
+              <Link
+                href="/about"
+                className="text-gray-700 hover:text-black font-medium py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 About
               </Link>
-              <Link href="/contact" className="text-gray-700 hover:text-black font-medium py-2">
+              <Link
+                href="/contact"
+                className="text-gray-700 hover:text-black font-medium py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 Contact
               </Link>
             </nav>

@@ -5,8 +5,6 @@ import { Calendar, User, Clock, ArrowRight, Search } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import Image from "next/image"
 import Link from "next/link"
-import Navigation from "@/components/navigation"
-
 
 export default function BlogPage() {
   const featuredPost = {
@@ -96,8 +94,6 @@ export default function BlogPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Navigation />
-
       {/* Hero Section */}
       <section className="relative h-64 flex items-center justify-center bg-gradient-to-r from-green-800 to-green-600">
         <div className="relative z-10 text-center text-white">
