@@ -511,7 +511,7 @@ export default function TravelGuidePage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-4">Ready to Start Your Adventure?</h2>
           <p className="text-xl mb-8 text-green-100 max-w-2xl mx-auto">
-            Now that you're prepared, let us help you plan the perfect East African experience
+            Now that you&apos;re prepared, let us help you plan the perfect East African experience
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button

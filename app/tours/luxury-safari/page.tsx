@@ -36,7 +36,7 @@ export default function LuxurySafariPage() {
       accommodation: "Luxury Tented Camps",
       includes: ["Private conservancy access", "Expert guide", "Fine dining", "Spa services", "Cultural experiences"],
       highlights: ["Private conservancies", "Migration viewing", "Luxury tents", "Cultural visits", "Photography"],
-      description: "Exclusive safari experience in Kenya's premier private conservancies and luxury camps.",
+      description: "Exclusive safari experience in Kenya&apos;s premier private conservancies and luxury camps.",
     },
     {
       name: "Grand East Africa Luxury Tour",
@@ -145,7 +145,7 @@ export default function LuxurySafariPage() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-green-800 mb-6">The Pinnacle of Safari Luxury</h2>
             <p className="text-lg text-gray-700 mb-8">
-              Experience East Africa's wildlife in absolute luxury with our premium safari packages. Stay in world-class
+              Experience East Africa&apos;s wildlife in absolute luxury with our premium safari packages. Stay in world-class
               lodges, enjoy private game drives with expert guides, and indulge in gourmet dining under the African
               stars. Our luxury safaris combine exceptional wildlife viewing with unparalleled comfort, personalized
               service, and exclusive access to private conservancies and premium locations.
@@ -243,7 +243,7 @@ export default function LuxurySafariPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-green-800 mb-4">World-Class Luxury Lodges</h2>
-            <p className="text-xl text-gray-600">Stay at Africa's most exclusive safari lodges</p>
+            <p className="text-xl text-gray-600">Stay at Africa&apos;s most exclusive safari lodges</p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             {luxuryLodges.map((lodge, index) => (

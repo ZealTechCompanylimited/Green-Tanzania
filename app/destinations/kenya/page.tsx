@@ -92,7 +92,7 @@ export default function KenyaPage() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-green-800 mb-6">Discover Kenya</h2>
             <p className="text-lg text-gray-700 mb-8">
-              Kenya is the birthplace of safari, offering some of the world's most spectacular wildlife experiences.
+              Kenya is the birthplace of safari, offering some of the world&apos;s most spectacular wildlife experiences.
               From the legendary Maasai Mara to the snow-capped peaks of Mount Kenya, this diverse country provides
               unforgettable encounters with nature and culture. Witness the Great Migration, spot the Big Five, and
               immerse yourself in the rich traditions of the Maasai people.
@@ -111,7 +111,7 @@ export default function KenyaPage() {
               <div className="text-center">
                 <Mountain className="h-12 w-12 text-green-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-green-800 mb-2">5,199m Peak</h3>
-                <p className="text-gray-600">Mount Kenya - Africa's second highest mountain</p>
+                <p className="text-gray-600">Mount Kenya - Africa&apos;s second highest mountain</p>
               </div>
             </div>
           </div>
@@ -123,7 +123,7 @@ export default function KenyaPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-green-400 mb-4">Top Attractions</h2>
-            <p className="text-xl text-gray-300">Explore Kenya's most iconic destinations</p>
+            <p className="text-xl text-gray-300">Explore Kenya&apos;s most iconic destinations</p>
           </div>
           <div className="grid lg:grid-cols-2 gap-8">
             {attractions.map((attraction, index) => (

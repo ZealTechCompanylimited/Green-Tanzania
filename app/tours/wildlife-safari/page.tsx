@@ -196,8 +196,8 @@ export default function WildlifeSafariPage() {
       <section className="py-16 bg-green-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-green-800 mb-4">Wildlife You'll Encounter</h2>
-            <p className="text-xl text-gray-600">Meet Africa's most iconic animals in their natural habitat</p>
+            <h2 className="text-3xl font-bold text-green-800 mb-4">Wildlife You&apos;ll Encounter</h2>
+            <p className="text-xl text-gray-600">Meet Africa&apos;s most iconic animals in their natural habitat</p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             {wildlifeHighlights.map((wildlife, index) => (

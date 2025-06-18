@@ -93,9 +93,9 @@ export default function ZanzibarPage() {
             <h2 className="text-3xl font-bold text-green-800 mb-6">Discover Zanzibar</h2>
             <p className="text-lg text-gray-700 mb-8">
               Zanzibar is a tropical paradise in the Indian Ocean, famous for its pristine white sand beaches, crystal
-              clear turquoise waters, and rich cultural heritage. The island's Stone Town is a UNESCO World Heritage
+              clear turquoise waters, and rich cultural heritage. The island&apos;s Stone Town is a UNESCO World Heritage
               site, showcasing centuries of Swahili, Arab, Persian, and European influences. Known as the Spice Island,
-              Zanzibar offers aromatic spice tours, historic architecture, and some of the world's most beautiful
+              Zanzibar offers aromatic spice tours, historic architecture, and some of the world&apos;s most beautiful
               beaches.
             </p>
             <div className="grid md:grid-cols-3 gap-8">
@@ -124,7 +124,7 @@ export default function ZanzibarPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-green-400 mb-4">Top Attractions</h2>
-            <p className="text-xl text-gray-300">Explore Zanzibar's most captivating destinations</p>
+            <p className="text-xl text-gray-300">Explore Zanzibar&apos;s most captivating destinations</p>
           </div>
           <div className="grid lg:grid-cols-2 gap-8">
             {attractions.map((attraction, index) => (

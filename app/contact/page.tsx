@@ -107,7 +107,7 @@ export default function ContactPage() {
     {
       question: "Are your tours suitable for children?",
       answer:
-        "Yes! We offer family-friendly safaris with age-appropriate activities. Some lodges have minimum age requirements, which we'll discuss during planning.",
+        "Yes! We offer family-friendly safaris with age-appropriate activities. Some lodges have minimum age requirements, which we&apos;ll discuss during planning.",
     },
   ]
 
@@ -119,7 +119,7 @@ export default function ContactPage() {
       <section className="relative h-64 flex items-center justify-center bg-gradient-to-r from-green-800 to-green-600">
         <div className="relative z-10 text-center text-white">
           <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
-          <p className="text-xl">We're here to help plan your perfect East African adventure</p>
+          <p className="text-xl">We&apos;re here to help plan your perfect East African adventure</p>
         </div>
       </section>
 
@@ -135,7 +135,7 @@ export default function ContactPage() {
                     <MessageCircle className="h-5 w-5" />
                     Send Us a Message
                   </CardTitle>
-                  <CardDescription>Fill out the form below and we'll get back to you within 24 hours</CardDescription>
+                  <CardDescription>Fill out the form below and we&apos;ll get back to you within 24 hours</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <form onSubmit={handleSubmit} className="space-y-6">

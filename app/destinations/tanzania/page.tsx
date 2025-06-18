@@ -92,7 +92,7 @@ export default function TanzaniaPage() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-green-800 mb-6">Discover Tanzania</h2>
             <p className="text-lg text-gray-700 mb-8">
-              Tanzania is home to some of Africa's most iconic wildlife destinations. From the endless plains of the
+              Tanzania is home to some of Africa&apos;s most iconic wildlife destinations. From the endless plains of the
               Serengeti to the snow-capped peak of Mount Kilimanjaro, Tanzania offers unparalleled natural beauty and
               wildlife experiences. Witness the Great Migration, encounter the Big Five, and immerse yourself in rich
               Maasai culture.
@@ -111,7 +111,7 @@ export default function TanzaniaPage() {
               <div className="text-center">
                 <Mountain className="h-12 w-12 text-green-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-green-800 mb-2">5,895m Peak</h3>
-                <p className="text-gray-600">Mount Kilimanjaro - Africa's highest mountain</p>
+                <p className="text-gray-600">Mount Kilimanjaro - Africa&apos;s highest mountain</p>
               </div>
             </div>
           </div>
@@ -123,7 +123,7 @@ export default function TanzaniaPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-green-400 mb-4">Top Attractions</h2>
-            <p className="text-xl text-gray-300">Explore Tanzania's most spectacular destinations</p>
+            <p className="text-xl text-gray-300">Explore Tanzania&apos;s most spectacular destinations</p>
           </div>
           <div className="grid lg:grid-cols-2 gap-8">
             {attractions.map((attraction, index) => (

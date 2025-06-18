@@ -131,7 +131,7 @@ export default function BeachHolidaysPage() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-green-800 mb-6">Tropical Paradise Awaits</h2>
             <p className="text-lg text-gray-700 mb-8">
-              Escape to the pristine beaches of Zanzibar and Kenya's coast for the perfect blend of relaxation and
+              Escape to the pristine beaches of Zanzibar and Kenya&apos;s coast for the perfect blend of relaxation and
               adventure. From the historic charm of Stone Town to the crystal-clear waters of the Indian Ocean, our
               beach holidays offer luxury accommodations, exciting water sports, and unforgettable cultural experiences.
               Whether you seek ultimate relaxation or thrilling water adventures, we have the perfect beach escape for

@@ -181,7 +181,7 @@ export default function TourPage({ params }: TourPageProps) {
                     <div>
                       <h3 className="text-2xl font-semibold text-green-800 mb-4 flex items-center gap-2">
                         <CheckCircle className="h-6 w-6 text-green-600" />
-                        What's Included
+                        What&apos;s Included
                       </h3>
                       <div className="space-y-3">
                         {tour.includes.map((item, index) => (
@@ -196,7 +196,7 @@ export default function TourPage({ params }: TourPageProps) {
                     <div>
                       <h3 className="text-2xl font-semibold text-green-800 mb-4 flex items-center gap-2">
                         <XCircle className="h-6 w-6 text-red-600" />
-                        What's Not Included
+                        What&apos;s Not Included
                       </h3>
                       <div className="space-y-3">
                         {tour.excludes.map((item, index) => (

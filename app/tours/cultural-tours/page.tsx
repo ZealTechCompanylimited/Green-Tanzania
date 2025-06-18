@@ -227,7 +227,7 @@ export default function CulturalToursPage() {
       <section className="py-16 bg-green-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-green-800 mb-4">Communities You'll Meet</h2>
+            <h2 className="text-3xl font-bold text-green-800 mb-4">Communities You&apos;ll Meet</h2>
             <p className="text-xl text-gray-600">Discover the diverse cultures of East Africa</p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">

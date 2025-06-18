@@ -84,7 +84,7 @@ export default function BookingPage() {
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-green-800 mb-4">Book Your Safari Adventure</h1>
             <p className="text-xl text-gray-600">
-              Fill out the form below and we'll create a personalized itinerary for your dream African safari
+              Fill out the form below and we&apos;ll create a personalized itinerary for your dream African safari
             </p>
           </div>
 

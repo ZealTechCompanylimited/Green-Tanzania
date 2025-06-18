@@ -93,7 +93,7 @@ export default function MountainClimbingPage() {
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="relative z-10 text-center text-white">
           <h1 className="text-5xl font-bold mb-4">Mountain Climbing Tours</h1>
-          <p className="text-xl mb-6">Conquer Africa's Highest Peaks</p>
+          <p className="text-xl mb-6">Conquer Africa&apos;s Highest Peaks</p>
           <div className="flex items-center justify-center gap-4 text-green-300">
             <div className="flex items-center gap-1">
               <Star className="h-5 w-5 fill-current" />
@@ -111,9 +111,9 @@ export default function MountainClimbingPage() {
       <section className="py-16 bg-green-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-green-800 mb-6">Climb Africa's Majestic Peaks</h2>
+            <h2 className="text-3xl font-bold text-green-800 mb-6">Climb Africa&apos;s Majestic Peaks</h2>
             <p className="text-lg text-gray-700 mb-8">
-              Experience the ultimate adventure by climbing Mount Kilimanjaro, Africa's highest peak, or challenge
+              Experience the ultimate adventure by climbing Mount Kilimanjaro, Africa&apos;s highest peak, or challenge
               yourself with the technical ascent of Mount Kenya. Our expert guides ensure your safety while maximizing
               your chances of reaching the summit. With proper acclimatization, quality equipment, and experienced
               support teams, we make your mountain climbing dreams a reality.
@@ -221,7 +221,7 @@ export default function MountainClimbingPage() {
               <Card key={index} className="hover:shadow-lg transition-shadow">
                 <CardHeader>
                   <CardTitle className="text-green-800">{route.name}</CardTitle>
-                  <CardDescription className="text-green-600 font-medium">"{route.nickname}"</CardDescription>
+                  <CardDescription className="text-green-600 font-medium">&ldquo;{route.nickname}&rdquo;</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600 mb-4">{route.description}</p>

@@ -126,7 +126,7 @@ export default function AboutPage() {
                 <p className="text-gray-700 mb-4">
                   greenTanzania was founded in 2009 with a simple mission: to share the incredible beauty and wildlife
                   of East Africa while supporting local communities and conservation efforts. What started as a small
-                  family business has grown into one of the region's most trusted safari operators.
+                  family business has grown into one of the region&apos;s most trusted safari operators.
                 </p>
                 <p className="text-gray-700 mb-4">
                   Our founder, David Mwangi, grew up in the shadow of Mount Kilimanjaro and spent his childhood
@@ -134,8 +134,8 @@ export default function AboutPage() {
                   to create a company that would offer authentic, responsible, and unforgettable safari experiences.
                 </p>
                 <p className="text-gray-700">
-                  Today, we're proud to have welcomed over 10,000 travelers from around the world, each leaving with
-                  memories that last a lifetime and a deeper appreciation for Africa's natural wonders.
+                  Today, we&apos;re proud to have welcomed over 10,000 travelers from around the world, each leaving with
+                  memories that last a lifetime and a deeper appreciation for Africa&apos;s natural wonders.
                 </p>
               </div>
               <div className="relative h-96">
@@ -242,10 +242,10 @@ export default function AboutPage() {
                 />
               </div>
               <div>
-                <h3 className="text-2xl font-semibold text-green-800 mb-4">Protecting Africa's Wildlife</h3>
+                <h3 className="text-2xl font-semibold text-green-800 mb-4">Protecting Africa&apos;s Wildlife</h3>
                 <p className="text-gray-700 mb-4">
-                  We believe that tourism should benefit both visitors and the destinations they explore. That's why
-                  we're committed to responsible tourism practices that support wildlife conservation and local
+                  We believe that tourism should benefit both visitors and the destinations they explore. That&apos;s why
+                  we&apos;re committed to responsible tourism practices that support wildlife conservation and local
                   communities.
                 </p>
                 <ul className="space-y-3 text-gray-700">
